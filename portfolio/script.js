@@ -1,7 +1,13 @@
 document.getElementById("camelButton").addEventListener("click", function() {
     const inputString = document.getElementById("stringToConvertToCamelC").value;
     const camelCaseString = toCamelCase(inputString);
-    document.getElementById("output").textContent = camelCaseString;
+    document.getElementById("camelOutput").textContent = camelCaseString;
+})
+
+document.getElementById("spinButton").addEventListener("click", function() {
+    const inputString = document.getElementById("wordsToSpin").value;
+    const spinnedSentence = spinWords(inputString);
+    document.getElementById("spinOutput").textContent = spinnedSentence;
 })
 
 
@@ -23,6 +29,29 @@ function toCamelCase(str){
     let newStr = arr.join("");
     return newStr;
   }
+
+  function spinWords(string) {
+    const stringArr = string.split(" ");
+    const newArray = [];
+    for(let word of stringArr)
+    {
+        if(word.length < 5)
+            newArray.push(word);
+        else
+        {
+            const wordArray = word.split('');
+            const reversedArray = [];
+            for(let i = 0; i <= word.length; i++)
+            {
+                reversedArray.unshift(wordArray[i]);
+            }
+            let reversedWord = reversedArray.join('');
+            newArray.push(reversedWord);
+        }
+    }
+    let reverseString = newArray.join(' ');
+    return reverseString;
+}
 
   // Script to toggle sidebar on mobile
 const menuToggle = document.getElementById("menuToggle");

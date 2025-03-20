@@ -100,20 +100,21 @@ body {
     color: #666;
 }
 
-#camelCaseConverter {
+.functionality {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px
 }
 
-#camelCaseConverter h3 {
+.functionality h3 {
     font-size: 28px;
     color: #333;
     margin-bottom: 10px;
 }
 
-#camelCaseConverter input[type="text"] {
+.functionality input[type="text"] {
     width: 100%;
     padding: 10px;
     font-size: 18px;
@@ -122,7 +123,7 @@ body {
     border-radius: 4px;
 }
 
-#camelCaseConverter input[type="button"] {
+.functionality input[type="button"] {
     width: 100%;
     padding: 10px;
     background-color: #333;
@@ -133,13 +134,17 @@ body {
     cursor: pointer;
 }
 
-#camelCaseConverter input[type="button"]:hover {
+.functionality input[type="button"]:hover {
     background-color: #555;
 }
 
-#camelCaseConverter p {
+.functionality p {
     font-size: 16px;
     color: #444;
+}
+
+.functionality #spinOutput #camelOutput {
+    margin: 5px;
 }
 
 /* Responsive Styles */
